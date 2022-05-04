@@ -1,19 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+// import Parent from '../src/props/Parent';
+// import List from '../src/state/List';
+// import EventComponent from './events/EventComponent';
+import UserSearch from '../src/refs/UserSearch';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+    return (
+        <div>
+            <h1>App</h1>
+            {/* <List /> */}
+
+            {/* <br /><br />
+            <EventComponent /> */}
+
+            <UserSearch />
+
+
+        </div>
+    );
+};
+
+ReactDOM.render(<App />, document.querySelector('#root'));
+
+
+
+// Actually for using React Version 18
+// import { createRoot } from 'react-dom/client';
+// const container = document.getElementById('app');
+// const root = createRoot(container!);
+// root.render(<App tab="home" />);
